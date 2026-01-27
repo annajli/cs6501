@@ -1,0 +1,527 @@
+{
+  "timestamp": "20260120_110435",
+  "device": "cpu",
+  "quantization_bits": null,
+  "subjects": [
+    "astronomy",
+    "college_computer_science",
+    "elementary_mathematics",
+    "human_sexuality",
+    "international_law",
+    "logical_fallacies",
+    "moral_scenarios",
+    "philosophy",
+    "professional_medicine",
+    "professional_psychology"
+  ],
+  "num_subjects": 10,
+  "results": [
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "overall_accuracy": 41.81818181818181,
+      "total_correct": 1311,
+      "total_questions": 3135,
+      "subject_results": [
+        {
+          "subject": "astronomy",
+          "correct": 75,
+          "total": 152,
+          "accuracy": 49.34210526315789,
+          "timing": {
+            "total_real_time_seconds": 272.01183009147644,
+            "total_cpu_time_seconds": 2043.109375,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.7895515137597133,
+            "avg_cpu_time_per_question": 13.441509046052632,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 152
+          }
+        },
+        {
+          "subject": "college_computer_science",
+          "correct": 25,
+          "total": 100,
+          "accuracy": 25.0,
+          "timing": {
+            "total_real_time_seconds": 196.82574677467346,
+            "total_cpu_time_seconds": 1550.984375,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.9682574677467346,
+            "avg_cpu_time_per_question": 15.50984375,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 100
+          }
+        },
+        {
+          "subject": "elementary_mathematics",
+          "correct": 122,
+          "total": 378,
+          "accuracy": 32.27513227513227,
+          "timing": {
+            "total_real_time_seconds": 589.0224468708038,
+            "total_cpu_time_seconds": 4620.75,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.558260441457153,
+            "avg_cpu_time_per_question": 12.22420634920635,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 378
+          }
+        },
+        {
+          "subject": "human_sexuality",
+          "correct": 77,
+          "total": 131,
+          "accuracy": 58.778625954198475,
+          "timing": {
+            "total_real_time_seconds": 155.45271515846252,
+            "total_cpu_time_seconds": 1225.6875,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.186661947774523,
+            "avg_cpu_time_per_question": 9.356393129770993,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 131
+          }
+        },
+        {
+          "subject": "international_law",
+          "correct": 74,
+          "total": 121,
+          "accuracy": 61.15702479338842,
+          "timing": {
+            "total_real_time_seconds": 702.8931684494019,
+            "total_cpu_time_seconds": 1396.546875,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 5.809034449995057,
+            "avg_cpu_time_per_question": 11.541709710743802,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 121
+          }
+        },
+        {
+          "subject": "logical_fallacies",
+          "correct": 76,
+          "total": 163,
+          "accuracy": 46.62576687116564,
+          "timing": {
+            "total_real_time_seconds": 8087.850673913956,
+            "total_cpu_time_seconds": 1648.375,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 49.618715790883165,
+            "avg_cpu_time_per_question": 10.112730061349692,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 163
+          }
+        },
+        {
+          "subject": "moral_scenarios",
+          "correct": 292,
+          "total": 895,
+          "accuracy": 32.625698324022345,
+          "timing": {
+            "total_real_time_seconds": 10383.001970767975,
+            "total_cpu_time_seconds": 12576.765625,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 11.601119520411146,
+            "avg_cpu_time_per_question": 14.052252094972067,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 895
+          }
+        },
+        {
+          "subject": "philosophy",
+          "correct": 159,
+          "total": 311,
+          "accuracy": 51.12540192926045,
+          "timing": {
+            "total_real_time_seconds": 487.8541157245636,
+            "total_cpu_time_seconds": 3807.21875,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.568662751525928,
+            "avg_cpu_time_per_question": 12.241860932475884,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 311
+          }
+        },
+        {
+          "subject": "professional_medicine",
+          "correct": 155,
+          "total": 272,
+          "accuracy": 56.98529411764706,
+          "timing": {
+            "total_real_time_seconds": 775.0319626331329,
+            "total_cpu_time_seconds": 6071.296875,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 2.8493822155629887,
+            "avg_cpu_time_per_question": 22.32094439338235,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 272
+          }
+        },
+        {
+          "subject": "professional_psychology",
+          "correct": 256,
+          "total": 612,
+          "accuracy": 41.830065359477125,
+          "timing": {
+            "total_real_time_seconds": 1061.7448601722717,
+            "total_cpu_time_seconds": 8289.484375,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.734877222503712,
+            "avg_cpu_time_per_question": 13.544909109477125,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 612
+          }
+        }
+      ],
+      "timing": {
+        "total_real_time_seconds": 22711.689490556717,
+        "total_cpu_time_seconds": 43230.21875,
+        "total_gpu_time_seconds": 0.0,
+        "avg_real_time_per_question": 7.2445580512142635,
+        "avg_cpu_time_per_question": 13.78954346092504,
+        "avg_gpu_time_per_question": 0.0,
+        "num_questions": 3135
+      },
+      "wall_clock_time": 22769.36904668808,
+      "total_cpu_time": 43482.65625
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "overall_accuracy": 35.119617224880386,
+      "total_correct": 1101,
+      "total_questions": 3135,
+      "subject_results": [
+        {
+          "subject": "astronomy",
+          "correct": 67,
+          "total": 152,
+          "accuracy": 44.07894736842105,
+          "timing": {
+            "total_real_time_seconds": 84.56559133529663,
+            "total_cpu_time_seconds": 657.65625,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 0.55635257457432,
+            "avg_cpu_time_per_question": 4.3266858552631575,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 152
+          }
+        },
+        {
+          "subject": "college_computer_science",
+          "correct": 30,
+          "total": 100,
+          "accuracy": 30.0,
+          "timing": {
+            "total_real_time_seconds": 67.30933570861816,
+            "total_cpu_time_seconds": 526.671875,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 0.6730933570861817,
+            "avg_cpu_time_per_question": 5.26671875,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 100
+          }
+        },
+        {
+          "subject": "elementary_mathematics",
+          "correct": 90,
+          "total": 378,
+          "accuracy": 23.809523809523807,
+          "timing": {
+            "total_real_time_seconds": 193.7688009738922,
+            "total_cpu_time_seconds": 1517.203125,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 0.5126158755923075,
+            "avg_cpu_time_per_question": 4.013764880952381,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 378
+          }
+        },
+        {
+          "subject": "human_sexuality",
+          "correct": 67,
+          "total": 131,
+          "accuracy": 51.14503816793893,
+          "timing": {
+            "total_real_time_seconds": 62.580326795578,
+            "total_cpu_time_seconds": 487.46875,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 0.477712418286855,
+            "avg_cpu_time_per_question": 3.721135496183206,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 131
+          }
+        },
+        {
+          "subject": "international_law",
+          "correct": 73,
+          "total": 121,
+          "accuracy": 60.33057851239669,
+          "timing": {
+            "total_real_time_seconds": 75.17124795913696,
+            "total_cpu_time_seconds": 588.296875,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 0.6212499831333633,
+            "avg_cpu_time_per_question": 4.861957644628099,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 121
+          }
+        },
+        {
+          "subject": "logical_fallacies",
+          "correct": 73,
+          "total": 163,
+          "accuracy": 44.785276073619634,
+          "timing": {
+            "total_real_time_seconds": 89.95187711715698,
+            "total_cpu_time_seconds": 702.671875,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 0.5518520068537238,
+            "avg_cpu_time_per_question": 4.310870398773006,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 163
+          }
+        },
+        {
+          "subject": "moral_scenarios",
+          "correct": 226,
+          "total": 895,
+          "accuracy": 25.251396648044693,
+          "timing": {
+            "total_real_time_seconds": 654.1144895553589,
+            "total_cpu_time_seconds": 4797.90625,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 0.730854178274144,
+            "avg_cpu_time_per_question": 5.360789106145251,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 895
+          }
+        },
+        {
+          "subject": "philosophy",
+          "correct": 137,
+          "total": 311,
+          "accuracy": 44.05144694533762,
+          "timing": {
+            "total_real_time_seconds": 147.6234953403473,
+            "total_cpu_time_seconds": 1157.46875,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 0.47467361845770834,
+            "avg_cpu_time_per_question": 3.721764469453376,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 311
+          }
+        },
+        {
+          "subject": "professional_medicine",
+          "correct": 79,
+          "total": 272,
+          "accuracy": 29.044117647058826,
+          "timing": {
+            "total_real_time_seconds": 288.41864705085754,
+            "total_cpu_time_seconds": 2257.671875,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.060362672981094,
+            "avg_cpu_time_per_question": 8.300264246323529,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 272
+          }
+        },
+        {
+          "subject": "professional_psychology",
+          "correct": 259,
+          "total": 612,
+          "accuracy": 42.3202614379085,
+          "timing": {
+            "total_real_time_seconds": 334.4328110218048,
+            "total_cpu_time_seconds": 2616.484375,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 0.5464588415388968,
+            "avg_cpu_time_per_question": 4.275301266339869,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 612
+          }
+        }
+      ],
+      "timing": {
+        "total_real_time_seconds": 1997.9366228580475,
+        "total_cpu_time_seconds": 15309.5,
+        "total_gpu_time_seconds": 0.0,
+        "avg_real_time_per_question": 0.6373003581684362,
+        "avg_cpu_time_per_question": 4.88341307814992,
+        "avg_gpu_time_per_question": 0.0,
+        "num_questions": 3135
+      },
+      "wall_clock_time": 2019.3669502735138,
+      "total_cpu_time": 15394.828125
+    },
+    {
+      "model": "allenai/OLMo-1B-0724-hf",
+      "overall_accuracy": 23.54066985645933,
+      "total_correct": 738,
+      "total_questions": 3135,
+      "subject_results": [
+        {
+          "subject": "astronomy",
+          "correct": 32,
+          "total": 152,
+          "accuracy": 21.052631578947366,
+          "timing": {
+            "total_real_time_seconds": 1778.6437525749207,
+            "total_cpu_time_seconds": 2168.0625,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 11.70160363536132,
+            "avg_cpu_time_per_question": 14.263569078947368,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 152
+          }
+        },
+        {
+          "subject": "college_computer_science",
+          "correct": 38,
+          "total": 100,
+          "accuracy": 38.0,
+          "timing": {
+            "total_real_time_seconds": 196.64012145996094,
+            "total_cpu_time_seconds": 1311.84375,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.9664012145996095,
+            "avg_cpu_time_per_question": 13.1184375,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 100
+          }
+        },
+        {
+          "subject": "elementary_mathematics",
+          "correct": 74,
+          "total": 378,
+          "accuracy": 19.576719576719576,
+          "timing": {
+            "total_real_time_seconds": 533.9216775894165,
+            "total_cpu_time_seconds": 4172.234375,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.412491210554012,
+            "avg_cpu_time_per_question": 11.037657076719576,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 378
+          }
+        },
+        {
+          "subject": "human_sexuality",
+          "correct": 34,
+          "total": 131,
+          "accuracy": 25.954198473282442,
+          "timing": {
+            "total_real_time_seconds": 190.98528337478638,
+            "total_cpu_time_seconds": 1491.859375,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.457902926525087,
+            "avg_cpu_time_per_question": 11.388239503816793,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 131
+          }
+        },
+        {
+          "subject": "international_law",
+          "correct": 29,
+          "total": 121,
+          "accuracy": 23.96694214876033,
+          "timing": {
+            "total_real_time_seconds": 1746.6754767894745,
+            "total_cpu_time_seconds": 1833.734375,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 14.435334518921277,
+            "avg_cpu_time_per_question": 15.154829545454545,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 121
+          }
+        },
+        {
+          "subject": "logical_fallacies",
+          "correct": 37,
+          "total": 163,
+          "accuracy": 22.699386503067483,
+          "timing": {
+            "total_real_time_seconds": 289.09368872642517,
+            "total_cpu_time_seconds": 2271.234375,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.7735809124320563,
+            "avg_cpu_time_per_question": 13.933953220858896,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 163
+          }
+        },
+        {
+          "subject": "moral_scenarios",
+          "correct": 210,
+          "total": 895,
+          "accuracy": 23.463687150837988,
+          "timing": {
+            "total_real_time_seconds": 1936.2193427085876,
+            "total_cpu_time_seconds": 15230.125,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 2.163373567272165,
+            "avg_cpu_time_per_question": 17.016899441340783,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 895
+          }
+        },
+        {
+          "subject": "philosophy",
+          "correct": 64,
+          "total": 311,
+          "accuracy": 20.578778135048232,
+          "timing": {
+            "total_real_time_seconds": 519.6870310306549,
+            "total_cpu_time_seconds": 4089.625,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 1.671019392381527,
+            "avg_cpu_time_per_question": 13.14991961414791,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 311
+          }
+        },
+        {
+          "subject": "professional_medicine",
+          "correct": 61,
+          "total": 272,
+          "accuracy": 22.426470588235293,
+          "timing": {
+            "total_real_time_seconds": 815.8936016559601,
+            "total_cpu_time_seconds": 6435.53125,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 2.9996088296175003,
+            "avg_cpu_time_per_question": 23.660041360294116,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 272
+          }
+        },
+        {
+          "subject": "professional_psychology",
+          "correct": 159,
+          "total": 612,
+          "accuracy": 25.98039215686275,
+          "timing": {
+            "total_real_time_seconds": 1790.6905047893524,
+            "total_cpu_time_seconds": 8501.890625,
+            "total_gpu_time_seconds": 0.0,
+            "avg_real_time_per_question": 2.925964877106785,
+            "avg_cpu_time_per_question": 13.891978145424837,
+            "avg_gpu_time_per_question": 0.0,
+            "num_questions": 612
+          }
+        }
+      ],
+      "timing": {
+        "total_real_time_seconds": 9798.45048069954,
+        "total_cpu_time_seconds": 47506.140625,
+        "total_gpu_time_seconds": 0.0,
+        "avg_real_time_per_question": 3.125502545677684,
+        "avg_cpu_time_per_question": 15.153473883572568,
+        "avg_gpu_time_per_question": 0.0,
+        "num_questions": 3135
+      },
+      "wall_clock_time": 9823.80716919899,
+      "total_cpu_time": 47615.0
+    }
+  ]
+}
