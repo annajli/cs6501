@@ -1,0 +1,161 @@
+============================================================
+  YouTube Educational Video Analyzer
+============================================================
+Paste a YouTube URL to get a summary, key concepts,
+and quiz questions. Type 'exit' to quit.
+
+YouTube URL: https://www.youtube.com/watch?v=aircAruvnKk
+
+Fetching transcript and analyzing... please wait.
+
+[DEBUG] Transcript fetch failed for 'aircAruvnKk': AttributeError: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+I was unable to fetch the transcript for the video you provided. This can happen for a few reasons, including the video being private, age-restricted, lacking captions, or other technical issues.
+
+To still assist you, I can suggest a couple of alternatives:
+
+1. **Watch the Video**: You could watch the video and share key points. I can help you summarize or analyze those points afterward.
+2. **Check for Captions**: If the video has subtitles, consider enabling them and providing me with the text, which I can then analyze.
+3. **Seek Other Resources**: If you share the topic or main focus of the video, I can provide related information or resources.
+
+Let me know how you'd like to proceed!
+
+============================================================
+
+YouTube URL: quit
+Goodbye!
+(cs6501) PS C:\Users\annaj\Github Repos\cs6501\topic4\agent_project> python youtube_agent.py
+C:\Users\annaj\Github Repos\cs6501\topic4\agent_project\youtube_agent.py:109: LangGraphDeprecatedSinceV10: create_react_agent has been moved to `langchain.agents`. Please update your import to `from langchain.agents import create_agent`. Deprecated in LangGraph V1.0 to be removed in V2.0.
+  agent = create_react_agent(llm, [get_youtube_transcript], prompt=SYSTEM_PROMPT)
+============================================================
+  YouTube Educational Video Analyzer
+============================================================
+Paste a YouTube URL to get a summary, key concepts,
+and quiz questions. Type 'exit' to quit.
+
+YouTube URL: https://www.youtube.com/watch?v=aircAruvnKk                                                            
+                                          
+Fetching transcript and analyzing... please wait.
+
+## Summary
+The video provides an introduction to neural networks, particularly focusing on their structure and how they are used to recognize handwritten digits. The creator emphasizes the remarkable capability of the human brain to recognize patterns effortlessly while contrasting this with how challenging it is for a computer to perform the same task. By explaining the basic components of a neural network—neurons, layers, and activations—the video lays the groundwork for understanding how these networks learn from data, with a particular focus on the mathematical aspects of the process.
+
+## Key Concepts
+- **Neurons**: Basic units of a neural network that hold a number (activation) between 0 and 1, representing the light intensity of corresponding pixels in an input image.
+- **Layers**: Neural networks are structured in layers (input layer, multiple hidden layers, and output layer), with each layer connected to the next, facilitating the flow of information.
+- **Activations**: The values held by neurons, which reflect how much the network believes certain characteristics are present in the input data; higher values indicate stronger belief.
+- **Weights**: Values assigned to connections between neurons, determining how much influence one neuron has on another; they are crucial in learning to recognize patterns.
+- **Bias**: An additional parameter that adjusts the weighted sum in a neuron, helping to control neuron activation; it sets a threshold for when a neuron is activated.
+- **Sigmoid Function**: A mathematical function used to squash the output of the neurons into a range between 0 and 1, often used for determining activation.
+- **Hidden Layers**: Intermediate layers in a neural network that help transform input data into meaningful features, contributing to the complex decision-making process in recognition tasks.
+- **Learning**: The process of adjusting weights and biases in a neural network to improve performance on tasks like digit recognition through interaction with data.
+
+## Quiz Questions
+1. **Multiple Choice:** What is the main purpose of a neural network as presented in the video?
+   - a) To generate random numbers
+   - b) To recognize handwritten digits
+   - c) To create visual art
+   - d) To play video games
+   **Correct Answer:** b) To recognize handwritten digits
+
+2. **Short Answer:** What do the neurons in the input layer of the neural network represent?
+   **Correct Answer:** They represent the grayscale values of the corresponding pixels in an input image.
+
+3. **Multiple Choice:** Which function is commonly used to convert the weighted sums into values between 0 and 1?   
+   - a) Linear Function
+   - b) ReLU Function
+   - c) Sigmoid Function
+   - d) Exponential Function
+   **Correct Answer:** c) Sigmoid Function
+
+4. **Short Answer:** What role do weights play in a neural network?
+   **Correct Answer:** Weights determine the influence of one neuron's output on another neuron's input, guiding the network's learning process.
+
+5. **Multiple Choice:** How many total weights and biases were mentioned in the video for the neural network structure discussed?
+   - a) 5,000
+   - b) 8,000
+   - c) 10,000
+   - d) Approximately 13,000
+   **Correct Answer:** d) Approximately 13,000
+
+============================================================
+
+YouTube URL: https://www.youtube.com/watch?v=aywZrzNaKjs
+
+Fetching transcript and analyzing... please wait.
+
+## Summary
+The video provides an introduction to LangChain, an open-source framework that enables developers to integrate large language models (LLMs) like GPT-4 with external data sources and computation mechanisms. It emphasizes how LangChain allows the connection of LLMs to proprietary databases, helping create applications that not only answer questions but also perform actions like sending emails or conducting data analysis. The video discusses key components of the framework, including LLM wrappers, prompt templates, and agents, revealing the potential of LangChain to enhance personal assistance, data analytics, and education.
+
+## Key Concepts
+- **LangChain**: An open-source framework used to combine LLMs with external data and computation sources, currently available as a Python or TypeScript package.
+- **LLM Wrappers**: Interfaces that connect to various LLMs, allowing users to integrate their functionalities into applications without needing complex coding.
+- **Prompt Templates**: Dynamic templates that allow user inputs to be formatted into prompts for LLMs, enabling personalization of requests sent to the models.
+- **Indexes & Vector Stores**: Systems that store text as embeddings, enabling LLMs to perform similarity searches and extract relevant information from larger datasets.
+- **Chains**: Compositions of different processes combining LLMs and prompt templates to form a sequence of tasks that generate user responses.
+- **Agents**: Components that allow LLMs to interact with external APIs, enabling the execution of specific actions like running Python code for computational tasks.
+- **Pinecone**: A vector database used in conjunction with LangChain to store and access vector representations of data efficiently.
+- **Use Cases**: Various applications of LangChain in fields like personal assistance, data analysis, and education, showcasing its versatility in real-world scenarios.
+
+## Quiz Questions
+1. **What is LangChain?**
+   - **Answer**: An open-source framework for integrating large language models with external data sources and computation.
+
+2. **What are LLM Wrappers used for?**
+   - A) To compress text data
+   - B) To connect large language models to applications
+   - C) To convert audio to text
+   - **Correct Answer**: B
+
+3. **Describe the function of prompt templates in LangChain.**
+   - **Answer**: Prompt templates allow user input to be dynamically integrated into prompts for LLMs, enabling personalized requests.
+
+4. **What are agents in LangChain?**
+   - A) Algorithms for data sorting
+   - B) Components that allow LLMs to interact with external APIs
+   - C) Graphical user interfaces
+   - **Correct Answer**: B
+
+5. **How does a similarity search function in LangChain?**
+   - **Answer**: It uses vector representations of questions to retrieve relevant information from a vector database based on similarity to stored data.
+
+============================================================
+
+YouTube URL: https://www.youtube.com/watch?v=_L39rN6gz7Y&list=PLakf6XoaFMqKLBIkOTGxUgABAeNPmbv9g
+
+Fetching transcript and analyzing... please wait.
+
+## Summary
+The video provides an engaging introduction to decision trees, particularly focusing on classification trees. It explains how these trees can categorize data based on yes/no questions and numeric values, using an example involving preferences for the film "Cool as Ice." The content covers terminology, the process of building a classification tree from raw data, methods for evaluating tree effectiveness like Gini impurity, and concepts such as overfitting and tree pruning.
+
+## Key Concepts
+- **Decision Trees**: A model that makes decisions based on the answers to certain questions, ultimately leading to a classification or prediction.
+- **Classification Trees**: A type of decision tree that is used to classify data into categories based on input features.
+- **Gini Impurity**: A metric used to measure the impurity of a leaf in a decision tree, with lower values indicating purer classifications.
+- **Leaf Nodes**: The end points of a decision tree that represent final classifications without any further branches.
+- **Overfitting**: A modeling error that occurs when a decision tree becomes too complex, capturing noise in the data rather than general patterns.
+- **Pruning**: The process of reducing the size of a decision tree to avoid overfitting and better generalize predictions on unseen data.
+- **Cross Validation**: A technique used to evaluate the performance of a model by partitioning the data into subsets, thus preventing overfitting and ensuring that the model is robust.
+
+## Quiz Questions
+1. **What is a classification tree?**
+   - **Answer**: A type of decision tree that categorizes data based on yes/no questions and input features.        
+
+2. **Which impurity metric is primarily discussed in the video?**
+   - a) Entropy
+   - b) Gini impurity
+   - c) Information Gain
+   - **Correct Answer**: b) Gini impurity
+
+3. **What happens if a decision tree is overly complex?**
+   - **Answer**: It can lead to overfitting, where the model captures noise instead of general patterns.
+
+4. **What is the purpose of pruning in decision trees?**
+   - **Answer**: To reduce the complexity of the tree and prevent overfitting, thereby improving predictive accuracy.
+
+5. **What is cross-validation used for in building decision trees?**
+   - **Answer**: To evaluate and ensure the robustness of the model by testing various configurations on different data subsets.
+
+============================================================
+
+YouTube URL: quit
+Goodbye!
