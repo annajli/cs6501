@@ -22,6 +22,7 @@ Set QUANTIZATION_BITS below to choose quantization level.
 Set PRINT_QUESTIONS to True to see each question and answer.
 """
 
+import argparse
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from datasets import load_dataset
@@ -441,8 +442,9 @@ def evaluate_subject(model, tokenizer, subject, model_name):
     correct = 0
     total = 0
     timing_info = TimingInfo()
+    question_results = []
 
-    for example in tqdm(dataset, desc=f"Testing {subject}", leave=True):
+    for idx, example in enumerate(tqdm(dataset, desc=f"Testing {subject}", leave=True)):
         question = example["question"]
         choices = example["choices"]
         correct_answer_idx = example["answer"]
@@ -455,6 +457,15 @@ def evaluate_subject(model, tokenizer, subject, model_name):
         if is_correct:
             correct += 1
         total += 1
+
+        question_results.append({
+            "question_id": idx,
+            "question": question,
+            "choices": choices,
+            "correct_answer": correct_answer,
+            "predicted_answer": predicted_answer,
+            "is_correct": is_correct
+        })
 
         # Print question details if enabled
         if PRINT_QUESTIONS:
@@ -482,7 +493,8 @@ def evaluate_subject(model, tokenizer, subject, model_name):
         "correct": correct,
         "total": total,
         "accuracy": accuracy,
-        "timing": timing_summary
+        "timing": timing_summary,
+        "question_results": question_results
     }
 
 
@@ -644,6 +656,18 @@ def main():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--use-gpu", dest="use_gpu", action="store_true", default=True)
+    parser.add_argument("--no-gpu", dest="use_gpu", action="store_false")
+    parser.add_argument("--quantization", type=lambda x: None if x.lower() == "none" else int(x),
+                        default=QUANTIZATION_BITS, metavar="BITS",
+                        help="Quantization bits: 4, 8, or none")
+    parser.add_argument("--print-questions", dest="print_questions", action="store_true", default=False)
+    args = parser.parse_args()
+    USE_GPU = args.use_gpu
+    QUANTIZATION_BITS = args.quantization
+    PRINT_QUESTIONS = args.print_questions
+
     try:
         output_file = main()
     except KeyboardInterrupt:

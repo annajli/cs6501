@@ -17,6 +17,7 @@ Usage:
 Set QUANTIZATION_BITS below to choose quantization level.
 """
 
+import argparse
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from datasets import load_dataset
@@ -495,6 +496,16 @@ def main():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--use-gpu", dest="use_gpu", action="store_true", default=True)
+    parser.add_argument("--no-gpu", dest="use_gpu", action="store_false")
+    parser.add_argument("--quantization", type=lambda x: None if x.lower() == "none" else int(x),
+                        default=QUANTIZATION_BITS, metavar="BITS",
+                        help="Quantization bits: 4, 8, or none")
+    args = parser.parse_args()
+    USE_GPU = args.use_gpu
+    QUANTIZATION_BITS = args.quantization
+
     try:
         output_file = main()
     except KeyboardInterrupt:
