@@ -9,6 +9,9 @@
 | [Topic 3 — Agent Tool Use](topic3/README.md) | Manual and LangChain tool handling; parallel Ollama inference | 6 tasks |
 | [Topic 4 — LangGraph Tool Calling](topic4/README.md) | ToolNode vs. ReAct agent; YouTube educational video agent | 2 tasks |
 
+
+Note to Professor Kautz: I am still working on Topics 5 & 6, but they will definitely be in my portfolio by the end of spring break. Please check back. Thank you!
+
 ---
 
 ### Topic 1 — LLM Evaluation
