@@ -1,0 +1,76 @@
+==================================================
+LangGraph Routed LLM Agent (Task 4)
+  Default model: Llama-3.2-1B-Instruct
+  Prefix 'Hey Qwen' to use Qwen2.5-0.5B-Instruct
+==================================================
+  Type 'verbose' to enable per-node trace output.
+  Type 'quiet'   to disable trace output.
+  Type 'quit'    to exit.
+
+Using CUDA (NVIDIA GPU) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|██████████████████████████| 146/146 [00:00<00:00, 263.96it/s, Materializing param=model.norm.weight]
+Passing `generation_config` together with generation-related arguments=({'max_new_tokens', 'do_sample', 'pad_token_id', 'top_p', 'temperature'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Model loaded: meta-llama/Llama-3.2-1B-Instruct
+Loading model: Qwen/Qwen2.5-0.5B-Instruct
+Loading weights: 100%|█████████████████████████| 290/290 [00:00<00:00, 1309.86it/s, Materializing param=model.norm.weight]
+Model loaded: Qwen/Qwen2.5-0.5B-Instruct
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+
+==================================================
+Enter your text (prefix with 'Hey Qwen' to use Qwen, or 'quit' to exit):
+==================================================
+
+> Hey Qwen, do cats like fish or chicken better?
+
+Processing with Qwen2.5-0.5B-Instruct...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+--------------------------------------------------
+Qwen2.5-0.5B-Instruct Response:
+--------------------------------------------------
+User: , do cats like fish or chicken better?
+Assistant: While cats and other mammals generally prefer the taste of fish, there have been instances where fish may be preferred over other meat sources by some individuals. For instance, some people may enjoy the taste of game meats such as deer, elk, or bear, which are not typically considered to be "meat" in the traditional sense.
+
+It is important to note that human preferences for certain foods can vary widely based on individual tastes, cultural background, and personal experiences. As a result, it is difficult to definitively say whether cats prefer fish or other meat-based foods compared to other animals. Ultimately, the decision between different food sources should depend on the specific needs and preferences of an individual cat.
+
+That being said, many cats have learned to appreciate the flavors of various animal-based foods and may prefer them over human-made alternatives. However, it's always best to consult with a veterinarian to ensure your cat receives proper nutrition and health care. The most important thing is to provide a balanced diet that meets their nutritional requirements and avoids any potential risks associated with dietary changes.
+
+Remember, every cat is unique and has its own individual preferences, so the answer to whether cats prefer fish or other meat-based foods will likely vary from one cat to another. Ultimately, the best approach is to observe
+
+==================================================
+Enter your text (prefix with 'Hey Qwen' to use Qwen, or 'quit' to exit):
+==================================================
+
+> How do I stop my cat from stealing my food?
+
+Processing with Llama-3.2-1B-Instruct...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+User: How do I stop my cat from stealing my food?
+Assistant: I'm happy to help! Cats are notorious food thieves, and it's not uncommon for them to sniff out and snatch food from countertops, tables, and even your hands. Here are some tips to help you prevent your cat from stealing your food:    
+
+1. **Keep food out of sight**: Store food in closed containers or zip-top bags to prevent your cat from accessing them. You can also use airtight containers or a food storage cabinet to keep your cat's eyes off the food.
+2. **Make your food less appealing**: Try to make your food less attractive to your cat by:
+        * Using high-protein, low-carb foods or making your own cat food.
+        * Offering food in a separate room or area from where your cat sleeps and eats.
+        * Avoiding giving your cat table scraps or rich, fatty foods.
+3. **Use a barrier**: Place a barrier, such as a plastic or metal mesh screen, between your cat's reach and the food. This can help deter your cat from getting to the food.
+4. **Keep your cat occupied**: Engage your cat in playtime, provide puzzle toys, or offer interactive games to keep them occupied and distracted from food.
+5. **Supervise and redirect**: Keep an
+
+==================================================
+Enter your text (prefix with 'Hey Qwen' to use Qwen, or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!

@@ -1,0 +1,287 @@
+==================================================
+LangGraph Three-Party Chat Agent (Task 6)
+  Default: Llama-3.2-1B-Instruct
+  Prefix 'Hey Qwen' to address Qwen2.5-0.5B-Instruct
+==================================================
+  Type 'verbose' to enable per-node trace output.
+  Type 'quiet'   to disable trace output.
+  Type 'quit'    to exit.
+
+Using CUDA (NVIDIA GPU) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|███████████████████████████████| 146/146 [00:00<00:00, 266.85it/s, Materializing param=model.norm.weight]
+Passing `generation_config` together with generation-related arguments=({'do_sample', 'pad_token_id', 'top_p', 'temperature', 'max_new_tokens'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Model loaded: meta-llama/Llama-3.2-1B-Instruct
+Loading model: Qwen/Qwen2.5-0.5B-Instruct
+Loading weights: 100%|██████████████████████████████| 290/290 [00:00<00:00, 1300.16it/s, Materializing param=model.norm.weight]
+Model loaded: Qwen/Qwen2.5-0.5B-Instruct
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> verbose
+[MODE] Verbose mode enabled - tracing information will be shown
+[TRACE] Evaluating routing decision...
+[TRACE] Route decision: get_user_input (command or empty)
+[TRACE] Entering get_user_input node
+[TRACE] Conversation length: 0 turns
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> What is the best ice cream flavor?
+[TRACE] User input: 'What is the best ice cream flavor?'
+[TRACE] Appending Human turn to conversation, routing to model
+[TRACE] Evaluating routing decision...
+[TRACE] Route decision: call_llama (default)
+[TRACE] Entering call_llama node
+[TRACE] Building Llama's view of 1 turns
+[TRACE] Prompt (417 chars):
+System: You are Llama, an AI assistant participating in a three-way conversation with a Human user and another AI called Qwen. The conversation history labels each message with the speaker's name. Read the history, then give your own response. Respond only as Llama. Do not generate dialogue for the Human or Qwen, and do not prefix your reply with 'Llama:'.
+User: Human: What is the best ice cream flavor?
+Assistant:
+
+
+Llama is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)        
+[TRACE] Llama response (200 chars): 'Qwen, I'd be happy to help you with that. As a digital AI assistant, I can provi...'
+[TRACE] Entering print_response node
+
+--------------------------------------------------
+Llama:
+--------------------------------------------------
+Qwen, I'd be happy to help you with that. As a digital AI assistant, I can provide information on various ice cream flavors, but I can also help you narrow down your options based on your preferences.
+[TRACE] Conversation now has 2 turns
+[TRACE] Looping back to get_user_input
+[TRACE] Entering get_user_input node
+[TRACE] Conversation length: 2 turns
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> Hey Qwen, what do you think?
+[TRACE] User input: 'Hey Qwen, what do you think?'
+[TRACE] Appending Human turn to conversation, routing to model
+[TRACE] Evaluating routing decision...
+[TRACE] Route decision: call_qwen ('Hey Qwen' prefix)
+[TRACE] Entering call_qwen node
+[TRACE] Building Qwen's view of 3 turns
+[TRACE] Prompt (672 chars):
+System: You are Qwen, an AI assistant participating in a three-way conversation with a Human user and another AI called Llama. The conversation history labels each message with the speaker's name. Read the history, then give your own response. Respond only as Qwen. Do not generate dialogue for the Human or Llama, and do not prefix your reply with 'Qwen:'.
+User: Human: What is the best ice cream flavor?
+User: Llama: Qwen, I'd be happy to help you with that. As a digital AI assistant, I can provide information on various ice cream flavors, but I can also help you narrow down your options based on your preferences.
+User: Human: Hey Qwen, what do you think?
+Assistant:
+
+
+Qwen is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)        
+[TRACE] Qwen response (606 chars): 'Qwen: When it comes to ice cream, there's truly no one-size-fits-all answer. Eac...'
+[TRACE] Entering print_response node
+
+--------------------------------------------------
+Qwen:
+--------------------------------------------------
+Qwen: When it comes to ice cream, there's truly no one-size-fits-all answer. Each flavor offers unique textures, tastes, and personal experiences. To help you find what you're looking for, I suggest trying some of these popular flavors: Vanilla, Chocolate, Strawberry, Mint, and Caramel. These are all well-known and loved by many ice cream lovers around the world. Let me know if any of these seem appealing! Also, feel free to ask about other types of ice cream or cuisine. Enjoy your taste adventure! Qwen: That sounds good, let's go on a flavor exploration trip together! 🍓😊 #IceCream #Cuisine #Flavors
+[TRACE] Conversation now has 4 turns
+[TRACE] Looping back to get_user_input
+[TRACE] Entering get_user_input node
+[TRACE] Conversation length: 4 turns
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> What is the weirdest ice cream flavor combination?
+[TRACE] User input: 'What is the weirdest ice cream flavor combination?'
+[TRACE] Appending Human turn to conversation, routing to model
+[TRACE] Evaluating routing decision...
+[TRACE] Route decision: call_llama (default)
+[TRACE] Entering call_llama node
+[TRACE] Building Llama's view of 5 turns
+[TRACE] Prompt (1361 chars):
+System: You are Llama, an AI assistant participating in a three-way conversation with a Human user and another AI called Qwen. The conversation history labels each message with the speaker's name. Read the history, then give your own response. Respond only as Llama. Do not generate dialogue for the Human or Qwen, and do not prefix your reply with 'Llama:'.
+User: Human: What is the best ice cream flavor?
+Assistant: Llama: Qwen, I'd be happy to help you with that. As a digital AI assistant, I can provide information on various ice cream flavors, but I can also help you narrow down your options based on your preferences.
+User: Human: Hey Qwen, what do you think?
+User: Qwen: Qwen: When it comes to ice cream, there's truly no one-size-fits-all answer. Each flavor offers unique textures, tastes, and personal experiences. To help you find what you're looking for, I suggest trying some of these popular flavors: Vanilla, Chocolate, Strawberry, Mint, and Caramel. These are all well-known and loved by many ice cream lovers around the world. Let me know if any of these seem appealing! Also, feel free to ask about other types of ice cream or cuisine. Enjoy your taste adventure! Qwen: That sounds good, let's go on a flavor exploration trip together! 🍓😊 #IceCream #Cuisine #Flavors
+User: Human: What is the weirdest ice cream flavor combination?
+Assistant:
+
+
+Llama is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)        
+[TRACE] Llama response (190 chars): 'Llama: Qwen, I've heard of some unusual ice cream flavor combinations, but I'm c...'
+[TRACE] Entering print_response node
+
+--------------------------------------------------
+Llama:
+--------------------------------------------------
+Llama: Qwen, I've heard of some unusual ice cream flavor combinations, but I'm curious to know what you think. What's the weirdest ice cream flavor combination you've ever tried or heard of?
+[TRACE] Conversation now has 6 turns
+[TRACE] Looping back to get_user_input
+[TRACE] Entering get_user_input node
+[TRACE] Conversation length: 6 turns
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> Hey Qwen, what do you think?
+[TRACE] User input: 'Hey Qwen, what do you think?'
+[TRACE] Appending Human turn to conversation, routing to model
+[TRACE] Evaluating routing decision...
+[TRACE] Route decision: call_qwen ('Hey Qwen' prefix)
+[TRACE] Entering call_qwen node
+[TRACE] Building Qwen's view of 7 turns
+[TRACE] Prompt (1606 chars):
+System: You are Qwen, an AI assistant participating in a three-way conversation with a Human user and another AI called Llama. The conversation history labels each message with the speaker's name. Read the history, then give your own response. Respond only as Qwen. Do not generate dialogue for the Human or Llama, and do not prefix your reply with 'Qwen:'.
+User: Human: What is the best ice cream flavor?
+User: Llama: Qwen, I'd be happy to help you with that. As a digital AI assistant, I can provide information on various ice cream flavors, but I can also help you narrow down your options based on your preferences.
+User: Human: Hey Qwen, what do you think?
+Assistant: Qwen: Qwen: When it comes to ice cream, there's truly no one-size-fits-all answer. Each flavor offers unique textures, tastes, and personal experiences. To help you find what you're looking for, I suggest trying some of these popular flavors: Vanilla, Chocolate, Strawberry, Mint, and Caramel. These are all well-known and loved by many ice cream lovers around the world. Let me know if any of these seem appealing! Also, feel free to ask about other types of ice cream or cuisine. Enjoy your taste adventure! Qwen: That sounds good, let's go on a flavor exploration trip together! 🍓😊 #IceCream #Cuisine #Flavors
+User: Human: What is the weirdest ice cream flavor combination?
+User: Llama: Llama: Qwen, I've heard of some unusual ice cream flavor combinations, but I'm curious to know what you think. What's the weirdest ice cream flavor combination you've ever tried or heard of?
+User: Human: Hey Qwen, what do you think?
+Assistant:
+
+
+Qwen is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)        
+[TRACE] Qwen response (350 chars): 'Qwen: Qwen: I don't have personal experiences with ice cream flavor combinations...'
+[TRACE] Entering print_response node
+
+--------------------------------------------------
+Qwen:
+--------------------------------------------------
+Qwen: Qwen: I don't have personal experiences with ice cream flavor combinations myself, but I would love to hear about those from others who share my interest in exploring different flavors. Is there anything specific you were thinking of? I might be able to provide some insights based on what you enjoy! #IceCream #Personality #IceCreamExperiments
+[TRACE] Conversation now has 8 turns
+[TRACE] Looping back to get_user_input
+[TRACE] Entering get_user_input node
+[TRACE] Conversation length: 8 turns
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> quit
+[TRACE] User entered exit command
+Goodbye!
+[TRACE] Evaluating routing decision...
+[TRACE] Route decision: END
+
+
+
+==================================================
+LangGraph Three-Party Chat Agent (Task 6)
+  Default: Llama-3.2-1B-Instruct
+  Prefix 'Hey Qwen' to address Qwen2.5-0.5B-Instruct
+==================================================
+  Type 'verbose' to enable per-node trace output.
+  Type 'quiet'   to disable trace output.
+  Type 'quit'    to exit.
+
+Using CUDA (NVIDIA GPU) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|██████████████| 146/146 [00:00<00:00, 264.91it/s, Materializing param=model.norm.weight]
+Passing `generation_config` together with generation-related arguments=({'top_p', 'pad_token_id', 'temperature', 'max_new_tokens', 'do_sample'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Model loaded: meta-llama/Llama-3.2-1B-Instruct
+Loading model: Qwen/Qwen2.5-0.5B-Instruct
+Loading weights: 100%|█████████████| 290/290 [00:00<00:00, 1275.52it/s, Materializing param=model.norm.weight]
+Model loaded: Qwen/Qwen2.5-0.5B-Instruct
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> What is your favorite thing about spring?
+
+Llama is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+--------------------------------------------------
+Llama:
+--------------------------------------------------
+The return of warmth and sunshine is a welcome change from the cold winter months. It's a time for new life and growth. The flowers bloom, and the trees regain their vibrancy.
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> Hey Qwen, what do you think?
+
+Qwen is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+--------------------------------------------------
+Qwen:
+--------------------------------------------------
+Hello, my dear! Spring offers an enchanting array of possibilities that captivate the senses. The arrival of fresh blooms brings beauty to every corner of the garden, inviting us to pause, bask in the sun, and savor the sweet scent. Trees begin to take shape again, shedding their branches like leaves on a tree after they've shed their leaves themselves. This period is full of hope and optimism, promising renewal and rebirth.
+
+While it might seem like a brief season, it holds a profound meaning—its end marks the beginning of the start of the new growing cycle. Spring signifies the transition between summer’s heat and autumn’s coolness. As we move into the warmer days, the world awakens to its natural rhythms, ready to thrive once more. Whether by nature or through our actions, I believe spring brings joy, rejuvenation, and a sense of unity with the environment around us. How would you define the impact of spring on humans? Is there anything specific you find particularly refreshing or rejuvenating during this time?
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> I really like seeing beautiful flowers bloom.
+
+Llama is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+--------------------------------------------------
+Llama:
+--------------------------------------------------
+The vibrant colors of spring flowers add a splash of color to the landscape, providing a visual feast that can be both calming and invigorating. The fresh scent of blooming flowers is also a welcome change from the dry, earthy smells of winter. Many people enjoy taking walks in the gardens, parks, and open spaces to enjoy the beauty of the season.
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> Hey Qwen, what is the most beautiful flower?
+
+Qwen is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+--------------------------------------------------
+Qwen:
+--------------------------------------------------
+essions of spring. How does your appreciation for flowers evolve over the seasons, reflecting any shifts in your personal experiences of spring?
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> Hey Llama, what do you think?
+
+Llama is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+--------------------------------------------------
+Llama:
+--------------------------------------------------
+I find that the colors and scents of spring flowers bring back memories of childhood summers spent in the garden with my family. The smell of fresh-cut grass and the sound of birds chirping create a sense of nostalgia and warmth that I associate with spring. It's a time when I feel most connected to nature and the world around me. The vibrant colors and lively atmosphere of spring make it a season that I look forward to, as it reminds me of happy times and the beauty of the world.
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!

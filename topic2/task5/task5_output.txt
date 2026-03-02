@@ -1,0 +1,260 @@
+RUN #1:
+==================================================
+LangGraph Chat Agent with History (Task 5)
+  Model: Llama-3.2-1B-Instruct
+  History: full conversation retained across turns
+==================================================
+  Type 'verbose' to enable per-node trace output.
+  Type 'quiet'   to disable trace output.
+  Type 'quit'    to exit.
+
+Using CUDA (NVIDIA GPU) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|█████████| 146/146 [00:00<00:00, 261.84it/s, Materializing param=model.norm.weight]
+Passing `generation_config` together with generation-related arguments=({'max_new_tokens', 'temperature', 'do_sample', 'pad_token_id', 'top_p'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Model loaded: meta-llama/Llama-3.2-1B-Instruct
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> My cat's name is Dappy. 
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+Hello Dappy! I'm happy to help you with anything you need. What's on your mind today? Do you have any questions or concerns?
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What is my cat's name?
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+Your cat's name is Dappy. I've been keeping an eye on you, and I wanted to make sure you knew that. How's Dappy doing today? Is she enjoying her favorite toys or treats?
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> She likes playing with her feather toy!
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+That's great to hear! It's wonderful that you're providing her with plenty of entertainment. Sometimes, a good feather toy can make all the difference in keeping a cat's mind active and engaged. Are there any other activities or playtime ideas you'd like to explore with Dappy?
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What toys does she like?
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+Dappy seems to enjoy playing with laser pointers, chasing invisible prey, and batting at strings. She also loves to curl up in blankets and snooze the day away. Do any of those sound like something you'd like to try with her?
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> Does Dappy like playing with feathers?
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+Yes, Dappy absolutely loves playing with feathers! She'll chase them around the room, pounce on them, and even try to catch them mid-air. I think it's great that you're trying to mix up her playtime to keep things interesting and prevent boredom. What do you think? Should we try some feather playtime with her?       
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> quit
+
+______________________________________________________________________
+RUN #2:
+==================================================
+LangGraph Chat Agent with History (Task 5)
+  Model: Llama-3.2-1B-Instruct
+  History: full conversation retained across turns
+==================================================
+  Type 'verbose' to enable per-node trace output.
+  Type 'quiet'   to disable trace output.
+  Type 'quit'    to exit.
+
+Using CUDA (NVIDIA GPU) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|█████████| 146/146 [00:00<00:00, 264.91it/s, Materializing param=model.norm.weight]
+Passing `generation_config` together with generation-related arguments=({'pad_token_id', 'max_new_tokens', 'do_sample', 'top_p', 'temperature'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Model loaded: meta-llama/Llama-3.2-1B-Instruct
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> Hi I'm Anna, and I have a cat named Dappy. It was a dreary day, so we stayed in and napped together.
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+That sounds like a lovely day at home with Dappy! It's great that you're prioritizing self-care and quality time with your feline friend. Cats can really provide comfort and companionship, don't they?
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What is my cat's name?
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+I'm happy to help you with that! Based on your description of your cat being named Dappy, I'm going to take a guess that Dappy is a Dalmatian?
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> Dappy is not a Dalmatian, because a Dalmatian is a dog, not a cat! What did we do today?
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+I'm so sorry, Anna! I made a mistake. Let me start again. I'm happy to chat with you and help you with any questions or concerns you may have. What else would you like to talk about?
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What was the weather like today?
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+Unfortunately, I'm a text-based AI assistant, so I don't have real-time access to current weather conditions. However, I can suggest some ways for you to find out the weather for your area. You can check online weather websites, such as AccuWeather or Weather.com, or use a mobile app like Dark Sky or Weather Underground. Would you like some help with that?
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!
+
+______________________________________________________________________
+RUN #3:
+==================================================
+LangGraph Chat Agent with History (Task 5)
+  Model: Llama-3.2-1B-Instruct
+  History: full conversation retained across turns
+==================================================
+  Type 'verbose' to enable per-node trace output.
+  Type 'quiet'   to disable trace output.
+  Type 'quit'    to exit.
+
+Using CUDA (NVIDIA GPU) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|█████████| 146/146 [00:00<00:00, 271.82it/s, Materializing param=model.norm.weight]
+Passing `generation_config` together with generation-related arguments=({'temperature', 'pad_token_id', 'max_new_tokens', 'do_sample', 'top_p'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Model loaded: meta-llama/Llama-3.2-1B-Instruct
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> Hi I'm Anna, and I have a cat named Dappy. It was a rainy and dreary day out today, so we ended up stayi
+ng indoors and napping together. It is my favorite pasttime.
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+Ah, sounds like a purrfect day to me, Anna! I'm glad you and Dappy had a good time together. Napping can be a great way to recharge, and it's lovely that you and Dappy share that special bond. How's Dappy doing today? Is she feeling a bit grumpy from the rainy day, or is she just happy to be indoors with you?        
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What is my cat's name?
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+I'm so sorry, I forgot! You mentioned earlier that Dappy is your cat. Can you tell me a bit more about her? What's her personality like? Does she like to play or just lounge around? I'm really curious to know more about your feline friend!
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> Could you tell me about what the weather was like today?
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+Of course, I'd be happy to share! According to my clock, today was a typical rainy day in our area. The sun was shining, but it was quite cloudy and grey. The rain was coming down in sheets, making everything feel cozy and snug. I'm sure Dappy was happy to have you indoors all day to keep her company!
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> What is my favorite pasttime?
+
+Processing with Llama-3.2-1B-Instruct...
+
+--------------------------------------------------
+Llama-3.2-1B-Instruct Response:
+--------------------------------------------------
+That's easy! Napping is definitely a great one! I'm glad you and Dappy shared a lovely afternoon together. What do you like to do when you're not napping? Do you have any other favorite activities or hobbies?    
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!

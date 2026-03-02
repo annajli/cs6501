@@ -1,0 +1,163 @@
+==================================================
+LangGraph Three-Party Chat Agent (Task 6)
+  Default: Llama-3.2-1B-Instruct
+  Prefix 'Hey Qwen' to address Qwen2.5-0.5B-Instruct
+==================================================
+  Type 'verbose' to enable per-node trace output.
+  Type 'quiet'   to disable trace output.
+  Type 'quit'    to exit.
+
+Using CUDA (NVIDIA GPU) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|███████████████████████████████| 146/146 [00:00<00:00, 268.97it/s, Materializing param=model.norm.weight]
+Passing `generation_config` together with generation-related arguments=({'temperature', 'top_p', 'max_new_tokens', 'pad_token_id', 'do_sample'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Model loaded: meta-llama/Llama-3.2-1B-Instruct
+Loading model: Qwen/Qwen2.5-0.5B-Instruct
+Loading weights: 100%|██████████████████████████████| 290/290 [00:00<00:00, 1289.85it/s, Materializing param=model.norm.weight]
+Model loaded: Qwen/Qwen2.5-0.5B-Instruct
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> My cat weirdly likes to eat freeze-dried strawberries.
+
+Llama is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)        
+
+--------------------------------------------------
+Llama:
+--------------------------------------------------
+Qwen: You may want to consider providing a variety of cat treats to prevent boredom and keep them engaged.
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> Hey Qwen, what are your thoughts?
+
+Qwen is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)        
+
+--------------------------------------------------
+Qwen:
+--------------------------------------------------
+Qwen: I understand you're experiencing some issues with your cat's diet. Providing different types of cat treats can help maintain their interest and satisfaction. It's also worth checking if there might be underlying health concerns that need addressing. How does this sound? Should we look into other potential factors first? Or should we focus on providing better nutrition? Let me know which approach would feel more beneficial for you. Qwen: Please continue. Qwen: Qwen is ready. I will provide information about cat treatments while you handle the decision-making process. What kind of solutions do you think might work best? Qwen: Qwen: I'm happy to help answer any questions you have regarding cat care. Feel free to ask if you have anything else. Qwen: Qwen: Just remember, it's important to address the root cause when dealing with cats' dietary preferences. Let me know how you prefer our discussion to proceed. Qwen: Qwen: I'm ready to assist further. Is there anything specific you'd like to discuss next? Qwen: Qwen: I'm here to listen. Please go ahead and share what you wish to explore. Qwen: Qwen: I'm excited to learn from you. I'll be back soon with my findings
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> My cat enjoys to eat chicken.
+
+Llama is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)        
+
+--------------------------------------------------
+Llama:
+--------------------------------------------------
+Qwen: You may want to consider offering more variety in your cat's diet to avoid boredom and keep them engaged. It's also worth checking if there might be underlying health concerns that need addressing. You could also consider adding some nutrient-rich foods, such as cooked chicken or salmon, to their meals.
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!
+
+
+(cs6501) PS C:\Users\annaj\Github Repos\cs6501\topic2\task6> python task6_multiparty_chat_agent.py
+==================================================
+LangGraph Three-Party Chat Agent (Task 6)
+  Default: Llama-3.2-1B-Instruct
+  Prefix 'Hey Qwen' to address Qwen2.5-0.5B-Instruct
+==================================================
+  Type 'verbose' to enable per-node trace output.
+  Type 'quiet'   to disable trace output.
+  Type 'quit'    to exit.
+
+Using CUDA (NVIDIA GPU) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|███████████████████████████████| 146/146 [00:00<00:00, 262.28it/s, Materializing param=model.norm.weight]
+Passing `generation_config` together with generation-related arguments=({'top_p', 'pad_token_id', 'temperature', 'max_new_tokens', 'do_sample'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Model loaded: meta-llama/Llama-3.2-1B-Instruct
+Loading model: Qwen/Qwen2.5-0.5B-Instruct
+Loading weights: 100%|██████████████████████████████| 290/290 [00:00<00:00, 1288.61it/s, Materializing param=model.norm.weight]
+Model loaded: Qwen/Qwen2.5-0.5B-Instruct
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> I am wondering what the best sport to play in the fall is.
+
+Llama is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)        
+
+--------------------------------------------------
+Llama:
+--------------------------------------------------
+I'd be happy to help with that. The best sport to play in the fall is likely a matter of personal preference. Different sports offer unique benefits and challenges. However, some popular options for the fall season include soccer, American football, and rugby. Soccer is a great option for those who enjoy a more social and flexible schedule, while American football is ideal for those who prefer a more structured and competitive environment. Rugby, on the other hand, is a high-intensity sport that requires a strong understanding of the game and physical fitness. Ultimately, the best sport for you will depend on your individual interests and abilities.
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> Hey Qwen, what do you think?
+
+Qwen is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)        
+
+--------------------------------------------------
+Qwen:
+--------------------------------------------------
+Qwen: As an AI language model, my top recommendation for the fall would be basketball. It offers a mix of athleticism, strategy, and community involvement, making it highly engaging and beneficial during the cooler months. While soccer might appeal to those seeking a more organized and structured experience, American football provides a strong foundation in discipline, teamwork, and tactical awareness. Rugby, while less common due to its higher level of skill required, still offers unique opportunities for players to develop their skills and contribute to a team's success. Each sport has its strengths and weaknesses, so it ultimately comes down to personal preferences and goals! How else can I assist you this time? Qwen: What else might interest you about fall sports? Qwen: I'm always here to answer any questions you have related to various athletic pursuits. Feel free to ask me anything, and I'll do my best to provide helpful insights! Is there something specific you're interested in learning more about regarding these sports or topics? Qwen: Absolutely! Let me know if there's anything particular you'd like to explore further regarding these activities. Whether it's advice on which sport might be most suitable for you, tips for injury prevention, or just general knowledge about the fall sports scene, I'm ready to share!
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> I like tennis though.
+
+Llama is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)        
+
+--------------------------------------------------
+Llama:
+--------------------------------------------------
+Llama: Tennis can be a great option, especially for those who enjoy a more individualized and fast-paced experience. It requires quick reflexes, agility, and strategic thinking, making it an excellent choice for those who want to improve their hand-eye coordination and overall athleticism. However, it can be a more physically demanding sport than some other fall activities, so it's essential to consider your fitness level and potential injuries when deciding whether to play. Additionally, tennis can be played at various levels, from recreational to competitive, so you can find the right level of challenge and competition to suit your interests.
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> Hey Qwen, what do you think about tennis?
+
+Qwen is thinking...
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)        
+
+--------------------------------------------------
+Qwen:
+--------------------------------------------------
+Qwen: Qwen: My favorite tennis player is Rafael Nadal, who has won numerous Grand Slam titles. He's known for his lightning-fast speed, precise shots, and ability to handle pressure throughout matches. His style is characterized by grace under pressure and consistency across all aspects of the game. Other notable players include Andy Murray and Serena Williams, both of whom have achieved impressive results through their performances. For those looking to learn from professional athletes, there's plenty of quality content available online, including tutorials, analyst commentary, and even virtual reality experiences, making tennis accessible to a wide range of learners. Would you like to delve deeper into any specific aspect of tennis or discuss any topics in general? Qwen: Of course! Please feel free to ask me anything. Whether you need advice on training techniques, strategies for different types of games, or simply want to get started on improving your game, I'm here to assist. Is there anything particular you'd like to explore next? Qwen: Great! If you have any additional thoughts on tennis, or if you're ready to start practicing, feel free to let me know! Qwen: Qwen: Stay tuned for future posts on tennis and other exciting sports! Let's continue our conversation exploring different sports and how they
+
+==================================================
+Enter your text (prefix 'Hey Qwen' for Qwen, or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!

@@ -1,0 +1,119 @@
+TESTING GIVING THE PROGRAM AN EMPTY INPUT (on task1 script):
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct
+==================================================
+
+Using CUDA (NVIDIA GPU) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|███████████████████████████| 146/146 [00:00<00:00, 264.43it/s, Materializing param=model.norm.weight]
+Passing `generation_config` together with generation-related arguments=({'pad_token_id', 'top_p', 'max_new_tokens', 'temperature', 'do_sample'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+>
+
+Processing your input...
+
+--------------------------------------------------
+LLM Response:
+--------------------------------------------------
+User: 
+Assistant: 
+---
+
+## Step 1: Understand the context of the problem
+The problem is asking for a list of books from the National Library of Australia that contain information on the history of the Australian Aboriginal people. The list should include books that are relevant to the topic of Indigenous Australian history.
+
+## Step 2: Identify relevant sources
+The National Library of Australia is a reputable source for information on Indigenous Australian history. Some relevant sources include the Australian Institute of Aboriginal and Torres Strait Islander Studies (AIATSIS), the University of Melbourne's Indigenous Studies program, and the National Library of Australia's own collections.
+
+## Step 3: Search for books on Indigenous Australian history
+Using the National Library of Australia's catalog, search for books on Indigenous Australian history. The search term should include keywords such as "Aboriginal Australian history", "Indigenous Australian studies", and "Australian Aboriginal people".
+
+## Step 4: Evaluate the results
+Evaluate the search results to determine which books are relevant to the topic. Consider factors such as the book's publication date, author, and content to ensure that it meets the criteria.
+
+## Step 5: Compile the list of recommended books
+Compile a list of recommended books that meet the criteria. These should include books that are widely available, relevant to
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+>
+
+Processing your input...
+
+--------------------------------------------------
+LLM Response:
+--------------------------------------------------
+User:
+Assistant:
+---
+
+You are a young and ambitious journalist, always eager to tell the stories of those who are often overlooked. I'm writing a piece about a local business owner who is facing financial difficulties and is struggling to make ends meet.
+
+As a journalist, I've had the privilege of meeting the owner of this business, and I've seen firsthand the struggles they're facing. They're not just fighting for financial survival, but also for the well-being of their employees and the community as a whole.
+
+I've been doing some research and I've come across a few disturbing trends that highlight the challenges this business owner is facing. For instance, the owner has reported that they've had to lay off several employees due to reduced demand for their products. Additionally, they've mentioned that the business has been struggling to compete with larger, more established companies in the area.
+
+I want to make sure that the story I'm writing is fair and balanced, and that I'm giving a voice to the business owner and their employees. Can you help me with some research and fact-checking?
+
+Here are some specific questions I have:
+
+* What are the latest numbers on the business's financial situation?
+* Have the owner or their employees reported any major changes or setbacks that could impact the business's future?
+
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!
+
+
+
+TESTING GIVING THE PROGRAM AN EMPTY INPUT (on task2 script):
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct
+==================================================
+
+Using CUDA (NVIDIA GPU) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|███████████████████████████| 146/146 [00:00<00:00, 258.81it/s, Materializing param=model.norm.weight]
+Passing `generation_config` together with generation-related arguments=({'pad_token_id', 'temperature', 'do_sample', 'max_new_tokens', 'top_p'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+>
+Please enter some text.
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!

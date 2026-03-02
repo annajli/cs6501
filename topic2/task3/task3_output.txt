@@ -1,0 +1,64 @@
+==================================================
+LangGraph Parallel LLM Agent (Task 3)
+Llama-3.2-1B-Instruct  vs  Qwen2.5-0.5B-Instruct
+==================================================
+  Type 'verbose' to enable per-node trace output.
+  Type 'quiet'   to disable trace output.
+  Type 'quit'    to exit.
+
+Using CUDA (NVIDIA GPU) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|███████████████████████████| 146/146 [00:00<00:00, 264.93it/s, Materializing param=model.norm.weight]
+Passing `generation_config` together with generation-related arguments=({'pad_token_id', 'temperature', 'max_new_tokens', 'do_sample', 'top_p'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Model loaded: meta-llama/Llama-3.2-1B-Instruct
+Loading model: Qwen/Qwen2.5-0.5B-Instruct
+Loading weights: 100%|███████████████████████████| 290/290 [00:00<00:00, 736.57it/s, Materializing param=model.norm.weight]
+Model loaded: Qwen/Qwen2.5-0.5B-Instruct
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to lg_graph.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> Can cats eat watermelon?
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+==================================================
+Llama-3.2-1B-Instruct Response:
+==================================================
+User: Can cats eat watermelon?
+Assistant: That's a interesting question!
+
+While cats can't resist the sweetness of watermelon, it's not a good idea for them to eat it as a regular snack. Here's why:
+
+1. **Water content:** Watermelon is mostly water, which can cause digestive issues in cats. Cats have a different digestive system than humans, and the high water content in watermelon can lead to stomach upset, diarrhea, or even vomiting.
+2. **Sugar content:** While watermelon does contain some natural sugars, it's not a balanced snack for cats. Cats have specific dietary needs, and their bodies are adapted to process meat and other protein-rich foods, not sugars and fruits.        
+3. **Lack of essential nutrients:** Watermelon is low in essential nutrients like protein, fat, and fiber that cats need to thrive. Cats require a balanced diet that includes these nutrients to maintain optimal health.
+4. **Risk of kidney stones:** Cats are prone to developing kidney stones, and watermelon's high water content can contribute to this risk.
+
+So, what can you do instead?
+
+* Offer your cat a small amount of plain, cooked chicken or turkey as a treat.
+* Provide fresh, clean water to stay hydrated.
+* Consider your cat's individual needs and consult with your veterinarian for
+
+==================================================
+Qwen2.5-0.5B-Instruct Response:
+==================================================
+User: Can cats eat watermelon?
+Assistant: No, cats cannot eat watermelon. Watermelons are a fruit and not an animal or plant. Cats have digestive systems that process food differently than animals or plants. Cats require a diet that is high in protein, fat, and carbohydrates to maintain proper health.
+Watermelons contain high levels of water, which can be harmful if consumed by cats as they may cause them to lose too much fluid. Cats need to drink plenty of water throughout the day to stay hydrated, so it's best to give them fresh water with no added sugar or flavors. Some cat foods may also contain other ingredients that can be toxic to cats, such as chocolate or caffeine. It's important to consult with your veterinarian for advice on feeding your cat. Additionally, it's not recommended to feed your cat a diet that is higher in sodium, as this can lead to dehydration. Instead, focus on providing a balanced diet that includes all essential nutrients. Remember, even though some people might enjoy drinking watermelon juice, it should never replace a healthy and varied diet, and only in moderation. As with any pet food, always check labels before feeding your cat. If you're concerned about feeding your cat, consult your veterinarian or a certified cat nutritionist for personalized advice. It's important to remember that
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> quit
+Goodbye!
